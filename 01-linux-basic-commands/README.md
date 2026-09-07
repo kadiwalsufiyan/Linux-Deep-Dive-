@@ -1,132 +1,299 @@
-Lab 1: Introduction to Linux Basic Commands
-
-Objectives
-
-By the end of this lab, you will be able to:
-
-- Understand and execute basic Linux commands such as "ls", "cd", "pwd", "mkdir", and "rm".
-- Navigate directories and manage files efficiently.
-- Write a simple Bash script to automate file and directory creation.
+🐧 Lab 1: Introduction to Linux Basic Commands
 
 ---
 
-Prerequisites
+📌 Lab Objectives
 
-- A Linux-based operating system such as Ubuntu, Fedora, or Debian.
-- Terminal access.
-- Basic familiarity with using a command-line interface (CLI).
+By completing this lab, you will learn how to:
+
+- Use basic Linux commands.
+- Navigate between directories.
+- Create and remove files and directories.
+- Copy and move files.
+- Create and execute a basic Bash script.
 
 ---
 
-Lab Tasks
+🖥️ Prerequisites
 
-Task 1: Learn Basic Linux Commands
+Before starting this lab, you need:
 
-Subtask 1.1: List Directory Contents ("ls")
+- A Linux operating system (Ubuntu, Debian, Fedora, etc.)
+- Terminal access
+- Basic knowledge of the Linux command line
 
-Open the terminal and run:
+---
+
+🚀 Task 1: Basic Linux Commands
+
+---
+
+🔹 Command 1: "ls"
+
+📌 Purpose
+
+The "ls" command is used to list files and directories.
+
+💻 Command
 
 ls
 
-Expected Outcome: Displays files and directories in the current location.
+📖 Explanation
 
-Explanation: The "ls" command lists the contents of a directory.
+This command displays the files and directories available in the current location.
 
-For detailed information, use:
+🎯 Expected Result
+
+You will see a list of files and directories.
+
+---
+
+🔹 Command 2: "ls -l"
+
+📌 Purpose
+
+Display detailed information about files and directories.
+
+💻 Command
 
 ls -l
 
-The "-l" option displays detailed information such as permissions, ownership, and file size.
+📖 Explanation
 
-To display hidden files:
+The "-l" option shows information such as:
+
+- File permissions
+- File owner
+- File size
+- Modification date
+
+---
+
+🔹 Command 3: "ls -a"
+
+📌 Purpose
+
+Display all files, including hidden files.
+
+💻 Command
 
 ls -a
 
-The "-a" option shows all files, including hidden files.
+📖 Explanation
+
+Files starting with "." are hidden files in Linux.
 
 ---
 
-Subtask 1.2: Navigate Directories ("cd" and "pwd")
+📂 Task 2: Directory Navigation
 
-Check your current working directory:
+---
+
+🔹 Command 4: "pwd"
+
+📌 Purpose
+
+Display the current working directory.
+
+💻 Command
 
 pwd
 
-Navigate to your home directory:
+🎯 Expected Result
+
+You will see the full path of your current directory.
+
+Example:
+
+/home/username
+
+---
+
+🔹 Command 5: "cd ~"
+
+📌 Purpose
+
+Navigate to the user's home directory.
+
+💻 Command
 
 cd ~
 
-Move into a subdirectory:
+📖 Explanation
+
+The "~" symbol represents the current user's home directory.
+
+---
+
+🔹 Command 6: "cd Documents"
+
+📌 Purpose
+
+Move into the "Documents" directory.
+
+💻 Command
 
 cd Documents
 
-Return to the parent directory:
+⚠️ Note
+
+The directory must exist. Use "ls" to check available directories.
+
+---
+
+🔹 Command 7: "cd .."
+
+📌 Purpose
+
+Move to the parent directory.
+
+💻 Command
 
 cd ..
 
+📖 Explanation
+
+The ".." symbol represents the parent directory.
+
 ---
 
-Subtask 1.3: Create and Remove Directories
+📁 Task 3: Directory Management
 
-Create a directory:
+---
+
+🔹 Command 8: "mkdir"
+
+📌 Purpose
+
+Create a new directory.
+
+💻 Command
 
 mkdir test_folder
 
-Verify that it was created:
+🎯 Expected Result
 
-ls
+A directory named "test_folder" will be created.
 
-Remove an empty directory:
+---
+
+🔹 Command 9: "rmdir"
+
+📌 Purpose
+
+Remove an empty directory.
+
+💻 Command
 
 rmdir test_folder
 
-Remove a directory and its contents recursively:
+⚠️ Important
+
+This command works only if the directory is empty.
+
+---
+
+🔹 Command 10: "rm -r"
+
+📌 Purpose
+
+Remove a directory and its contents.
+
+💻 Command
 
 rm -r test_folder
 
-«⚠️ Warning: The "rm -r" command can permanently delete files and directories. Use it carefully.»
+⚠️ Warning
+
+This command permanently deletes files and directories. Use it carefully.
 
 ---
 
-Task 2: Practice File Management
+📄 Task 4: File Management
 
-Subtask 2.1: Create and Delete Files
+---
 
-Create an empty file:
+🔹 Command 11: "touch"
+
+📌 Purpose
+
+Create an empty file.
+
+💻 Command
 
 touch example.txt
 
-Delete the file:
+🎯 Expected Result
+
+A new empty file named "example.txt" will be created.
+
+---
+
+🔹 Command 12: "rm"
+
+📌 Purpose
+
+Delete a file.
+
+💻 Command
 
 rm example.txt
 
+⚠️ Warning
+
+Deleted files may not be easily recoverable.
+
 ---
 
-Subtask 2.2: Copy and Move Files
+🔹 Command 13: "cp"
 
-Create the file again:
+📌 Purpose
 
-touch example.txt
+Copy a file.
 
-Copy the file:
+💻 Command
 
 cp example.txt example_copy.txt
 
-Move the copied file to the Documents directory:
+📖 Explanation
 
-mv example_copy.txt ~/Documents/
+This creates a copy of "example.txt" named "example_copy.txt".
 
 ---
 
-Task 3: Bash Script for File and Directory Creation
+🔹 Command 14: "mv"
 
-Create the Bash Script
+📌 Purpose
 
-Create a new script:
+Move or rename files.
+
+💻 Command
+
+mv example_copy.txt ~/Documents/
+
+🎯 Expected Result
+
+The file will be moved to the "Documents" directory.
+
+---
+
+⚙️ Task 5: Bash Scripting
+
+---
+
+🔹 Step 1: Create the Script
+
+💻 Command
 
 nano create_files.sh
 
-Add the following script:
+This creates and opens a new Bash script.
+
+---
+
+🔹 Step 2: Add the Script Code
+
+💻 Bash Script
 
 #!/bin/bash
 
@@ -140,19 +307,38 @@ touch file1.txt file2.txt file3.txt
 
 echo "Files created successfully!"
 
-Save and exit the editor.
+📖 Script Explanation
 
-Make the script executable:
+Command| Purpose
+"#!/bin/bash"| Specifies the Bash interpreter
+"mkdir -p lab_files"| Creates the directory
+"cd lab_files"| Moves into the directory
+"touch"| Creates empty files
+"echo"| Displays a message
+
+---
+
+🔹 Step 3: Make the Script Executable
+
+💻 Command
 
 chmod +x create_files.sh
 
-Run the script:
+📖 Explanation
+
+This gives execute permission to the script.
+
+---
+
+🔹 Step 4: Run the Script
+
+💻 Command
 
 ./create_files.sh
 
-Expected Outcome
+🎯 Expected Result
 
-The script creates:
+The following structure will be created:
 
 lab_files/
 ├── file1.txt
@@ -161,36 +347,21 @@ lab_files/
 
 ---
 
-Commands Covered
-
-Command| Purpose
-"ls"| List directory contents
-"pwd"| Display current directory
-"cd"| Change directory
-"mkdir"| Create directories
-"rmdir"| Remove empty directories
-"rm"| Remove files and directories
-"touch"| Create empty files
-"cp"| Copy files
-"mv"| Move or rename files
-"chmod"| Change file permissions
-
----
-
-Skills Demonstrated
+🧠 Skills Practiced
 
 - Linux Command Line
-- File Management
 - Directory Navigation
-- Basic Bash Scripting
-- Linux System Administration Fundamentals
+- File Management
+- Basic Linux Commands
+- Bash Scripting
+- File Permissions
 
 ---
 
-Conclusion
+✅ Conclusion
 
-In this lab, I practiced essential Linux commands for navigating directories and managing files.
+In this lab, I practiced essential Linux commands used for navigating directories and managing files.
 
-I also created a Bash script to automate the creation of directories and files.
+I also created and executed a Bash script to automate file and directory creation.
 
-These commands and scripting skills form an important foundation for Linux System Administration.
+These are fundamental skills required for a Linux System Administrator.
